@@ -14,9 +14,19 @@ function* fetchShelf(action) {
     })
 }
 
+function* addToShelf(action) {
+    let response = yield axios({
+        method: 'POST',
+        url: '/api/shelf',
+        data: action.payload
+    })
+  
+}
+
 function* shelfSaga() {
     //we think this works the same as the watcher, but this is new to us?
     yield takeLatest('FETCH_SHELF_ITEM', fetchShelf)
+    yield takeLatest('ADD_SHELF_ITEM', addToShelf)
 }
 
 export default shelfSaga; 

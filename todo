@@ -4,7 +4,7 @@
         [X] Register functionality
         [X] Login functionality
     
-    [ ] Shelf info page functionality
+    [x] Shelf info page functionality
         [x] Dispatch to server
             [x] GET req to server
             [x] Create FETCH_SHELF_ITEM reducer
@@ -12,14 +12,14 @@
         [x] Pass info to reduxState
         [x] Map info to display on DOM via unordered list item
 
-    [ ] Add item to shelf functionality  
-        [ ] Create a form to take in data of Desc, and Img
-        [ ] Insert the user id into state via backend
-        [ ] Dispatch to server
-            [ ] onSubmit POST data to DB
-            [ ] Create POST_SHELF_ITEM reducer
-            [ ] Create fetchShelf saga
-        [ ] Refresh DOM via GET req
+    [x] Add item to shelf functionality  
+        [x] Create a form to take in data of Desc, and Img
+        [x] Insert the user id into state via backend
+        [x] Dispatch to server
+            [x] onSubmit POST data to DB
+            [/] Create POST_SHELF_ITEM reducer
+            [x] Create fetchShelf saga
+        [x] Refresh DOM via GET req
     
     [ ] Delete item from shelf functionality
         [ ] Create a delete button via map loop

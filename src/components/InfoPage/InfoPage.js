@@ -29,6 +29,7 @@ class InfoPage extends React.Component {
       type: 'ADD_SHELF_ITEM',
       payload: this.state
     })
+    this.getShelf();
   }
 
   getShelf = () => {
@@ -67,7 +68,7 @@ class InfoPage extends React.Component {
           <button>Save Item</button>
         </form>
         
-          {this.props.store.shelf.setShelf.map((item) => (
+          {this.props.store.shelf.setShelfItem.map((item) => (
             <InfoItem key={item.id} item={item} />
           ))}
         
