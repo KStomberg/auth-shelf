@@ -1,9 +1,8 @@
     [X]Create DB
 
-    [ ] Auth functionality
-        [ ] Register functionality
-        [ ] Login functionality
-        [ ] 
+    [X] Auth functionality
+        [X] Register functionality
+        [X] Login functionality
     
     [ ] Shelf info page functionality
         [ ] Dispatch to server
