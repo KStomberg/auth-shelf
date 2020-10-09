@@ -27,17 +27,17 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 /**
  * Add an item for the logged in user to the shelf
  */
-router.post('/', (req, res) => {
+router.post('/', rejectUnauthenticated, (req, res) => {
   console.log("/shelf POST route");
   console.log(req.body);
-  // console.log("is authenticated?", req.isAuthenticated());
-  // console.log("user", req.user);
+  console.log("is authenticated?", req.isAuthenticated());
+  console.log("user", req.user);
 
   // Kick out unauthenticated users
-  //   if (!req.isAuthenticated()) {
-  //     res.sendStatus(403);
-  //     return;
-  //   }
+    if (!req.isAuthenticated()) {
+      res.sendStatus(403);
+      return;
+    }
 
   const queryString = `INSERT INTO "item" ("description", "image_url", "user_id" )
 VALUES ($1, $2, $3)`;
