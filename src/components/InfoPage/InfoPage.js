@@ -25,7 +25,10 @@ class InfoPage extends React.Component {
   addItem = (event) => {
     event.preventDefault();
     console.log('Current State:', this.state);
-    console.log('Clicked addItem!');
+    this.props.dispatch({
+      type: 'ADD_SHELF_ITEM',
+      payload: this.state
+    })
   }
 
   getShelf = () => {
