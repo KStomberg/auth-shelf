@@ -21,11 +21,11 @@
             [x] Create fetchShelf saga
         [x] Refresh DOM via GET req
     
-    [ ] Delete item from shelf functionality
-        [ ] Create a delete button via map loop
-        [ ] Dispatch to server
-            [ ] onClick send DELETE req to server
-            [ ] Create DELETE_SHELF_ITEM reducer
-            [ ] Create fetchShelf saga
-        [ ] Only allow user who added the item to DELETE
-        [ ] Only map the delete button if the user is allowed to DELETE
+    [X] Delete item from shelf functionality
+        [X] Create a delete button via map loop
+        [X] Dispatch to server
+            [X] onClick send DELETE req to server
+            [X] Create DELETE_SHELF_ITEM reducer
+            [X] Create fetchShelf saga
+        [X] Only allow user who added the item to DELETE
+        [X] Only map the delete button if the user is allowed to DELETE

@@ -69,7 +69,7 @@ class InfoPage extends React.Component {
         </form>
         
           {this.props.store.shelf.setShelfItem.map((item) => (
-            <InfoItem key={item.id} item={item} />
+            <InfoItem key={item.id} item={item} getShelf={this.getShelf}/>
           ))}
         
 

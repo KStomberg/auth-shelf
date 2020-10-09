@@ -4,7 +4,21 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 
 class InfoItem extends React.Component {
 
+    getShelf = () => {
+        this.props.dispatch({
+          type: 'FETCH_SHELF_ITEM'
+        })
+      }
 
+    deleteItem = () => {
+        console.log('Clicked delete button', this.props.item.id);
+        this.props.dispatch({
+            type: 'DELETE_SHELF_ITEM',
+            payload: this.props.item.id
+        })
+        this.getShelf();
+}
+        
   render() {
     return (
       <>
@@ -25,3 +39,5 @@ class InfoItem extends React.Component {
 }
 
 export default connect(mapStoreToProps)(InfoItem);
+
+

@@ -23,10 +23,20 @@ function* addToShelf(action) {
   
 }
 
+function* deleteFromShelf(action) {
+    console.log('in delete saga', action.payload);
+    
+    let response = yield axios({
+        method: 'DELETE',
+        url: `/api/shelf/${action.payload}`
+    })
+}
+
 function* shelfSaga() {
     //we think this works the same as the watcher, but this is new to us?
     yield takeLatest('FETCH_SHELF_ITEM', fetchShelf)
     yield takeLatest('ADD_SHELF_ITEM', addToShelf)
+    yield takeLatest('DELETE_SHELF_ITEM', deleteFromShelf)
 }
 
 export default shelfSaga; 

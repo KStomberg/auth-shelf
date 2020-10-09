@@ -47,7 +47,7 @@ VALUES ($1, $2, $3)`;
       res.sendStatus(201);
     })
     .catch((err) => {
-      console.err(`POST /Add Shelf_Item failed`, err);
+      console.error(`POST /Add Shelf_Item failed`, err);
       res.sendStatus(500);
     });
 });
@@ -55,8 +55,21 @@ VALUES ($1, $2, $3)`;
 /**
  * Delete an item if it's something the logged in user added
  */
-router.delete('/:id', (req, res) => {
-  // DELETE route code here
+router.delete('/:id', rejectUnauthenticated, (req, res) => {
+   console.log("/shelf DELETE route");
+  console.log('req.params.id', req.params.id);
+  console.log("is authenticated?", req.isAuthenticated());
+  console.log("user", req.user);
+  const queryString = `DELETE FROM "item" WHERE "id" = $1;`;
+  pool
+    .query(queryString, [req.params.id])
+    .then((results) => {
+      res.sendStatus(201);
+    })
+    .catch((err) => {
+      console.error(`DELETE SHELF_ITEM failed`, err);
+      res.sendStatus(500)
+    })
 });
 
 /**
