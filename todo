@@ -1,0 +1,32 @@
+    [X]Create DB
+
+    [ ] Auth functionality
+        [ ] Register functionality
+        [ ] Login functionality
+        [ ] 
+    
+    [ ] Shelf info page functionality
+        [ ] Dispatch to server
+            [ ] GET req to server
+            [ ] Create FETCH_SHELF_ITEM reducer
+            [ ] Create fetchShelf saga
+        [ ] Pass info to reduxState
+        [ ] Map info to display on DOM via unordered list item
+
+    [ ] Add item to shelf functionality  
+        [ ] Create a form to take in data of Desc, and Img
+        [ ] Insert the user id into state via backend
+        [ ] Dispatch to server
+            [ ] onSubmit POST data to DB
+            [ ] Create POST_SHELF_ITEM reducer
+            [ ] Create fetchShelf saga
+        [ ] Refresh DOM via GET req
+    
+    [ ] Delete item from shelf functionality
+        [ ] Create a delete button via map loop
+        [ ] Dispatch to server
+            [ ] onClick send DELETE req to server
+            [ ] Create DELETE_SHELF_ITEM reducer
+            [ ] Create fetchShelf saga
+        [ ] Only allow user who added the item to DELETE
+        [ ] Only map the delete button if the user is allowed to DELETE

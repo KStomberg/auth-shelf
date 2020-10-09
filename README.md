@@ -64,6 +64,9 @@ After running the login route above, you will be able to try any other route you
 
 We recommend working in groups of 4 or 6 and pair programming for this project. Each pair should take on one of the following features. You will want to identify any tasks that need to be finished in a particular order as a group to avoid merge conflicts. Each of the following features should be on a separate route.
 
+### Login Functionality
+The whole thing is broken, fix it.
+
 ### Display all Items
 
 The shelf (info) page should show all of the items stored in the database in a list or table.
