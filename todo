@@ -10,7 +10,7 @@
             [x] Create FETCH_SHELF_ITEM reducer
             [x] Create fetchShelf saga
         [x] Pass info to reduxState
-        [ ] Map info to display on DOM via unordered list item
+        [x] Map info to display on DOM via unordered list item
 
     [ ] Add item to shelf functionality  
         [ ] Create a form to take in data of Desc, and Img
