@@ -30,7 +30,8 @@ class InfoItem extends React.Component {
           alt={this.props.item.description}
           src={this.props.item.image_url}
         ></img>
-        {this.props.store.user.id === this.props.item.user_id && <button onClick={this.deleteItem}>Delete</button>}
+            {this.props.store.user.id === this.props.item.user_id && <button onClick={this.deleteItem}>Delete</button>}
+            <button>EDIT</button>
         </>
       
        

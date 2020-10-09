@@ -19,6 +19,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import EditInfoItem from '../EditInfoItem/EditInfoItem'
 
 import './App.css';
 
@@ -91,6 +92,12 @@ class App extends Component {
               path="/home"
               component={LandingPage}
               authRedirect="/user"
+            />
+            <ProtectedRoute
+              // logged in shows InfoPage else shows LoginPage
+              exact
+              path="/Edit"
+              component={EditInfoItem}
             />
 
             {/* If none of the other routes matched, we will show a 404. */}
