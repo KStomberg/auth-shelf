@@ -1,5 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import mapStoreToProps from '../../redux/mapStoreToProps';
+import InfoItem from '../InfoItem/InfoItem';
 
 // This is one of our simplest components
 // It doesn't have local state, so it can be a function component.
@@ -35,9 +37,15 @@ class InfoPage extends React.Component {
     return (
       <div>
         <p>Info Page</p>
+        
+          {this.props.store.shelf.setShelf.map((item) => (
+            <InfoItem key={item.id} item={item} />
+          ))}
+        
+
       </div>
     )
   }
 }
 
-export default connect()(InfoPage);
+export default connect(mapStoreToProps)(InfoPage);

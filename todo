@@ -5,11 +5,11 @@
         [X] Login functionality
     
     [ ] Shelf info page functionality
-        [ ] Dispatch to server
-            [ ] GET req to server
-            [ ] Create FETCH_SHELF_ITEM reducer
-            [ ] Create fetchShelf saga
-        [ ] Pass info to reduxState
+        [x] Dispatch to server
+            [x] GET req to server
+            [x] Create FETCH_SHELF_ITEM reducer
+            [x] Create fetchShelf saga
+        [x] Pass info to reduxState
         [ ] Map info to display on DOM via unordered list item
 
     [ ] Add item to shelf functionality  
